@@ -6,33 +6,37 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-
 public class MainActivity extends AppCompatActivity {
-
-    private TextView textHelloWorld;
-    private TextView textHiWorld;
+    private TextView helloWorld;
+    private TextView hiWorld;
     private boolean isHelloWorld;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        textHelloWorld = findViewById(R.id.txt_hello_world);
-        textHiWorld = findViewById(R.id.txt_hi_world);
-        textHelloWorld.setOnClickListener(new View.OnClickListener() {
+        helloWorld = findViewById(R.id.txt_hello_world);
+        hiWorld = findViewById(R.id.txt_hi_world);
+        helloWorld.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(isHelloWorld){
-                    textHelloWorld.animate().alpha(0.0f).setDuration(3000);
-                    textHiWorld.animate().alpha(1.0f).setDuration(3000);
-                    isHelloWorld= false;
+                    helloWorld.animate().alpha(0f).setDuration(3000);
+                    hiWorld.animate().alpha(1f).setDuration(3000);
+                    isHelloWorld = false;
                 }
                 else{
-                    textHelloWorld.animate().alpha(1.0f).setDuration(3000);
-                    textHiWorld.animate().alpha(0.0f).setDuration(3000);
-                    isHelloWorld= true;
 
+
+                    helloWorld.animate().alpha(1f).setDuration(3000);
+                    hiWorld.animate().alpha(0f).setDuration(3000);
+                    isHelloWorld = true;
                 }
             }
         });
+
+
+
+
     }
 }
