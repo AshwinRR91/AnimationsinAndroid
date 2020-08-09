@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.i("MyMessage","Android");
         Log.i("SpaceX","Falcon 9");
+        Log.i("SpaceX","Starship");
 
     }
 }
