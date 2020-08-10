@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
                     helloWorld.animate().alpha(1f).setDuration(3000);
                     hiWorld.animate().alpha(0f).setDuration(3000);
                     isHelloWorld = true;
+                    //Commit
                 }
             }
         });
